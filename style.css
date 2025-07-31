@@ -39,7 +39,8 @@ body {
 }
 
 .bton { width: 70px; }
-.btton, .bon { width: 140px; }
+.bon { width: 70px}
+.btton { width: 140px; }
 
 .bton {
   background: rgba(0, 42, 255, 0.527);
