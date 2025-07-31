@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculator</title> 
+  <style>
+  .btn {
+    color: rgb(255, 255, 255);
+    background-color: black;
+    border-color: aqua;
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    margin: 5px;
+  }
+    .clear {   
+    color: rgb(255, 255, 255);
+    background-color: rgb(8, 0, 255);
+    border-color: rgb(8, 0, 255);
+    width: 150px;
+    height: 50px;
+    font-size: 18px;
+    margin: 4px;
+  }
+  input{
+    height:50px;
+    width: 310px;
+  }
+  .back{
+    height:50px;
+    width: 320px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(8, 0, 255);
+    border-color: rgb(8, 0, 255);
+  }
+  </style>
+</head>
+<body>
+  <h2>Calculator </h2>
+<div style="background-color:black; width: 330px; padding:10px;">
+<input id="result" type="text" placeholder="0"><br><br>
+
+<button class="btn" onclick="Avalue('0')">0</button>
+<button class="btn" onclick="Avalue('9')">9</button>
+<button class="btn" onclick="Avalue('8')">8</button>
+<button class="btn" onclick="Avalue('7')">7</button>
+<button class="btn" onclick="Avalue('+')">+</button><br><br>
+
+<button class="btn" onclick="Avalue('6')">6</button>
+<button class="btn" onclick="Avalue('5')">5</button>
+<button class="btn" onclick="Avalue('4')">4</button>
+<button class="btn" onclick="Avalue('3')">3</button>
+<button class="btn" onclick="Avalue('-')">-</button><br><br>
+
+<button class="btn" onclick="Avalue('2')">2</button>
+<button class="btn" onclick="Avalue('1')">1</button>
+<button class="btn" onclick="Avalue('*')">*</button>
+<button class="btn" onclick="Avalue('.')">.</button>
+<button class="btn" onclick="Avalue('/')">/</button><br><br>
+
+<button class="clear" onclick="clr('')">Clear</button>
+<button class="clear" onclick="getvalue()">=</button>&nbsp;
+<button class="back" onclick="backspace()">BACK</button>
+</div>
+</body>
+<script>
+  function Avalue(value) {
+  document.getElementById("result").value += value
+}
+function backspace(){
+  output=document.getElementById("result").value.slice(0,-1);
+  result.value=output
+}
+function getvalue(){
+try{
+  const output = eval(document.getElementById("result").value)
+  document.getElementById("result").value=output
+}
+catch(err){
+ document.getElementById("result").value = "error"
+}
+}
+ function clr() {
+  document.getElementById("result").value = "";
+}
+</script>
+</html>
